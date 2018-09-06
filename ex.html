@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Month</title>
+</head>
+<body>
+<form>
+    <input id="hihi" type="text" name="hihi"/>
+    <button type="button" id="btnTinh" onclick="tinhsongay();">Tính số ngày</button><br>
+    <label id="kq"></label>
+</form>
+<script>
+    function tinhsongay() {
+        let hihi= document.getElementById('hihi');
+        switch (hihi) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                let month=document.write("Tháng" + hihi +"có 31 ngày");
+                let kq = document.getElementById('kq');
+                kq.innerHTML=month;
+                break;
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                let month1 =document.write("Tháng " + hihi + "Có 30 ngày");
+                kq.innerHTML=month1;
+                break;
+            default:
+                let month2 =document.write("Tháng 2 có 28 ngày");
+                kq.innerHTML=month2;
+        }
+    }
+</script>
+
+</body>
+</html>
